@@ -1,0 +1,10 @@
+<div style="width: 700px; height: 300px;">
+    <canvas #myGraf id="myChart"></canvas>
+  </div>
+  {{dataAleatoria | slice:0:3}}
+  <br>
+  {{dataAleatoria | slice:3}}
+  <br>
+  {{dataAleatoria | json}}
+  <br>
+  <button (click)="valoresAleatorios()">Click</button>
