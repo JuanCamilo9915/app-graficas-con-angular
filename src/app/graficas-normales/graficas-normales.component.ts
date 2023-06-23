@@ -12,6 +12,7 @@ export class GraficasNormalesComponent implements OnInit {
 
   muestra: boolean = true;
   c: any = [];
+  c2: any = [];
   dataAleatoria: number[] = [12, 19, 3, 5, 2, 3];
 
   constructor() { }
@@ -19,6 +20,7 @@ export class GraficasNormalesComponent implements OnInit {
   ngOnInit(): void {
     this.muestra = true;
     this.cre();
+    this.cre2();
   }
 
   cre() {
@@ -44,6 +46,30 @@ export class GraficasNormalesComponent implements OnInit {
     });
   }
 
+
+  cre2() {
+    this.c2 = new Chart('myChart2', {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: this.dataAleatoria,
+          backgroundColor: ['green', 'blue', 'yellow'],
+          borderColor: "green",
+          borderWidth: 7
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+
   valoresAleatorios(): void {
     let i = 0;
     for (const iterator of this.dataAleatoria) {
@@ -52,14 +78,9 @@ export class GraficasNormalesComponent implements OnInit {
     }
 
     this.c.destroy()
-    // this.c.render()
     this.cre();
-    // this.render2.removeClass(this.grafica.nativeElement, 'myChart')
-    // this.render2.addClass(this.grafica.nativeElement, 'myChart')
-    // this.cre(this.dataAleatoria);
-    // setTimeout(() => {
-    //   // this.cre(this.dataAleatoria);
-    // }, 1000);
+    this.c2.destroy()
+    this.cre2();
   }
 
 }
