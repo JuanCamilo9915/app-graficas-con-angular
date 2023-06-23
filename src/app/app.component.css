@@ -16,14 +16,21 @@ a {
 }
 
 .content {
-    margin: 0%;
-    padding: 0%;
     width: 85vw;
     height: auto;
     background-color: orange;
 }
 
-.titulo {
+.titulo > h1 {
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
     font-size: xx-large;
-    background-color: red;
+}
+.titulo > p {
+    margin: 0%;
+    margin-bottom: 3%;
+    padding: 0%;
+    text-align: center;
+    font-size: x-large;
 }
