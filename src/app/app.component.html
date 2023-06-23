@@ -1,3 +1,24 @@
-<h1>Soy el Título, jejejj!!!</h1>
+<main>
+  <section class="menu">
+    <ul *ngFor="let elementoMenu of elementosMenu">
+      <li><a href="{{elementoMenu['url']}}">Hole</a></li>
+      <li><a href="{{elementoMenu['url']}}" target="{{elementoMenu['tget']}}">Oleeee</a></li>
+    </ul>
+  </section>
 
-<app-graficas-normales></app-graficas-normales>
+  <section class="content">
+    <div class="titulo">
+      <h1>Soy el Título, jejejj!!!</h1>
+    </div>
+
+    <ng-container *ngIf="sonGraficasNormalesVisibles else graficasResponsivas">
+      <app-graficas-normales></app-graficas-normales>
+    </ng-container>
+
+    <ng-template #graficasResponsivas>
+      <app-graficas-responsivas></app-graficas-responsivas>
+    </ng-template>
+  </section>
+</main>
+
+<footer style="background-color: bisque;">footer</footer>
