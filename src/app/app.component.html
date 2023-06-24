@@ -1,15 +1,24 @@
 <main>
   <section class="menu">
-    <ul *ngFor="let elementoMenu of elementosMenu">
-      <li><a href="{{elementoMenu['url']}}">Hole</a></li>
-      <li><a href="{{elementoMenu['url']}}" target="{{elementoMenu['tget']}}">Oleeee</a></li>
+    <div class="content-img-menu">
+      <img class="imgMenu" src="../assets/img/graficasMenu.png" alt="" srcset="">
+    </div>
+    <ul>
+      <li *ngFor="let elementoMenu of elementosMenu">
+        <ng-container *ngIf="elementoMenu['tget'] === undefined else agregaTarget">
+          <a href="{{elementoMenu['url']}}">Hole</a>
+        </ng-container>
+        <ng-template #agregaTarget>
+          <a href="{{elementoMenu['url']}}" target="{{elementoMenu['tget']}}">Oleeee</a>
+        </ng-template>
+      </li>
     </ul>
   </section>
 
   <section class="content">
     <div class="titulo">
-      <h1>Bienvenidos!!!</h1>
-      <p>Ejemplos de Iplementación de Gráficas con Chart.js</p>
+      <h1>Bienvenid@s!!!</h1>
+      <p>Al Mundo de las Gráficas con Chart.js y Angular</p>
     </div>
 
     <ng-container *ngIf="sonGraficasNormalesVisibles else graficasResponsivas">
@@ -22,4 +31,7 @@
   </section>
 </main>
 
-<footer>footer</footer>
+<footer>
+  footer
+  <a href="https://www.flaticon.es/iconos-gratis/reporte" title="reporte iconos">Reporte iconos creados por Freepik - Flaticon</a>
+</footer>

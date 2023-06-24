@@ -1,3 +1,10 @@
+.grafica {
+    margin: auto;
+    width: 630px;
+    height: 300px;
+    background-color: aliceblue;
+}
+
 .separador {
     border: 2px dashed aliceblue;
 }

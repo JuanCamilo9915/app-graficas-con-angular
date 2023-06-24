@@ -15,6 +15,16 @@ a {
     background-color: aliceblue;
 }
 
+.menu > .content-img-menu {
+    text-align: center;
+}
+
+.imgMenu {
+    margin-top: 10%;
+    width: 50%;
+    height: 80px;
+}
+
 .content {
     width: 85vw;
     height: auto;
@@ -23,10 +33,12 @@ a {
 
 .titulo > h1 {
     margin: 0%;
+    margin-top: 2%;
     padding: 0%;
     text-align: center;
     font-size: xx-large;
 }
+
 .titulo > p {
     margin: 0%;
     margin-bottom: 3%;

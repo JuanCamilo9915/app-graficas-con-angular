@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js/auto';
 
 @Component({
@@ -7,8 +7,6 @@ import Chart from 'chart.js/auto';
   styleUrls: ['./graficas-normales.component.css']
 })
 export class GraficasNormalesComponent implements OnInit {
-
-  @ViewChild('myGraf') grafica!: ElementRef
 
   muestra: boolean = true;
   c: any = [];
