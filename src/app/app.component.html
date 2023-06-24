@@ -6,10 +6,14 @@
     <ul>
       <li *ngFor="let elementoMenu of elementosMenu">
         <ng-container *ngIf="elementoMenu['tget'] === undefined else agregaTarget">
-          <a href="{{elementoMenu['url']}}">Hole</a>
+          <a href="{{elementoMenu['url']}}">
+            {{elementoMenu['etiqueta'] ? elementoMenu['etiqueta'] : menuDesconocido}}
+          </a>
         </ng-container>
         <ng-template #agregaTarget>
-          <a href="{{elementoMenu['url']}}" target="{{elementoMenu['tget']}}">Oleeee</a>
+          <a href="{{elementoMenu['url']}}" target="{{elementoMenu['tget']}}">
+            {{elementoMenu['etiqueta'] ? elementoMenu['etiqueta'] : menuDesconocido}}
+          </a>
         </ng-template>
       </li>
     </ul>
@@ -33,5 +37,7 @@
 
 <footer>
   footer
-  <a href="https://www.flaticon.es/iconos-gratis/reporte" title="reporte iconos">Reporte iconos creados por Freepik - Flaticon</a>
+  Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik
+  </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a>
+  <p class="etiqueta-footer-copy">Copyright © Juan Camilo González Duque 2023</p>
 </footer>
