@@ -1,7 +1,10 @@
 .grafica {
     margin: auto;
-    width: 630px;
+    /* width: 630px; */
+    width: 50%;
     height: 300px;
+    box-sizing: border-box;
+    display: inline-block;
     background-color: aliceblue;
 }
 

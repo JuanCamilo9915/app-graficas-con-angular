@@ -46,3 +46,9 @@ a {
     text-align: center;
     font-size: x-large;
 }
+
+.barra-navegacion {
+    width: 100vw;
+    height: 200px;
+    background-color: blueviolet;
+}

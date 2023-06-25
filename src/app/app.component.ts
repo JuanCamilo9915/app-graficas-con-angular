@@ -30,8 +30,5 @@ export class AppComponent implements OnInit {
         {url: 'https://developer.mozilla.org/en-US/', tget: '_blank'}
       ];
   }
-
-  cambiarComponentes(): void {
-    this.sonGraficasNormalesVisibles = false;
-  }
+  
 }

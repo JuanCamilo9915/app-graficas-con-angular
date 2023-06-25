@@ -17,7 +17,6 @@
         </ng-template>
       </li>
     </ul>
-    <button (click)="cambiarComponentes()">Click</button>
   </section>
 
   <section class="content">
@@ -26,13 +25,15 @@
       <p>Al Mundo de las Gráficas con Chart.js y Angular</p>
     </div>
 
-    <ng-container *ngIf="sonGraficasNormalesVisibles else graficasResponsivas">
+    <div class="barra-navegacion">dfghfdh</div>
+
+    <!-- <ng-container *ngIf="sonGraficasNormalesVisibles else graficasResponsivas">
       <app-graficas-normales></app-graficas-normales>
     </ng-container>
 
     <ng-template #graficasResponsivas>
       <app-graficas-responsivas></app-graficas-responsivas>
-    </ng-template>
+    </ng-template> -->
   </section>
 </main>
 

@@ -11,6 +11,7 @@ export class GraficasNormalesComponent implements OnInit, OnDestroy {
   muestra: boolean = true;
   c: any = [];
   c2: any = [];
+  ct: any = [];
   dataAleatoria: number[] = [12, 19, 3, 5, 2, 3];
 
   constructor() { }
@@ -18,6 +19,7 @@ export class GraficasNormalesComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.muestra = true;
     this.cre();
+    this.cret2();
     this.cre2();
   }
 
@@ -44,6 +46,29 @@ export class GraficasNormalesComponent implements OnInit, OnDestroy {
     });
   }
 
+
+  cret2() {
+    this.ct = new Chart('myChartt', {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: this.dataAleatoria,
+          backgroundColor: ['green', 'blue', 'yellow'],
+          borderColor: "green",
+          borderWidth: 7
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
 
   cre2() {
     this.c2 = new Chart('myChart2', {

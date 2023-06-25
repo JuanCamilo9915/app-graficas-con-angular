@@ -1,25 +1,43 @@
 <div id="graficaBarras" class="grafica">
-    <canvas id="myChart"></canvas>
-  </div>
+  <canvas id="myChart"></canvas>
+
   {{dataAleatoria | slice:0:3}}
   <br>
   {{dataAleatoria | slice:3}}
   <br>
   {{dataAleatoria | json}}
+
   <br>
   <button (click)="valoresAleatorios()">Click</button>
+</div>
+
+
 <!-- grafica estatica y dinamica -->
-  <hr class="separador">
 
-  <div id="graficaBarras2" class="grafica">
-    <canvas id="myChart2"></canvas>
-  </div>
+<div id="graficaBarras" class="grafica">
+  <canvas id="myChartt"></canvas>
+
   {{dataAleatoria | slice:0:3}}
   <br>
   {{dataAleatoria | slice:3}}
   <br>
   {{dataAleatoria | json}}
+
   <br>
   <button (click)="valoresAleatorios()">Click</button>
+</div>
 
-  <hr class="separador">
+<hr class="separador">
+
+<div id="graficaBarras2" class="grafica">
+  <canvas id="myChart2"></canvas>
+</div>
+{{dataAleatoria | slice:0:3}}
+<br>
+{{dataAleatoria | slice:3}}
+<br>
+{{dataAleatoria | json}}
+<br>
+<button (click)="valoresAleatorios()">Click</button>
+
+<hr class="separador">
