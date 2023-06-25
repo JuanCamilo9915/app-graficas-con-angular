@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import Chart from 'chart.js/auto';
 
 @Component({
@@ -6,7 +6,7 @@ import Chart from 'chart.js/auto';
   templateUrl: './graficas-normales.component.html',
   styleUrls: ['./graficas-normales.component.css']
 })
-export class GraficasNormalesComponent implements OnInit {
+export class GraficasNormalesComponent implements OnInit, OnDestroy {
 
   muestra: boolean = true;
   c: any = [];
@@ -75,10 +75,19 @@ export class GraficasNormalesComponent implements OnInit {
       i++;
     }
 
-    this.c.destroy()
-    this.cre();
-    this.c2.destroy()
-    this.cre2();
+    // this.c.destroy()
+    // this.cre();
+    // this.c2.destroy()
+    // this.cre2();
+    this.c.update();
+    this.c2.update();
+  }
+
+  ngOnDestroy(): void {
+      console.log('Hola');
+      console.log(this.c);
+      this.c.destroy();
+      console.log(this.c);
   }
 
 }
