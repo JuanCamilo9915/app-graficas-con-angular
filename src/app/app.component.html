@@ -23,17 +23,24 @@
     <div class="titulo">
       <h1>Bienvenid@s!!!</h1>
       <p>Al Mundo de las Gráficas con Chart.js y Angular</p>
+
+      <ul class="lista-desordenada">
+        <li>
+          <button [disabled]="btn1" (click)="alerta(1)">vbjbvg</button>
+        </li>
+        <li>
+          <button [disabled]="btn2" (click)="alerta(2)">vbjbvg</button>
+        </li>
+      </ul>
     </div>
 
-    <div class="barra-navegacion">dfghfdh</div>
-
-    <!-- <ng-container *ngIf="sonGraficasNormalesVisibles else graficasResponsivas">
+    <ng-container *ngIf="sonGraficasNormalesVisibles else graficasResponsivas">
       <app-graficas-normales></app-graficas-normales>
     </ng-container>
 
     <ng-template #graficasResponsivas>
       <app-graficas-responsivas></app-graficas-responsivas>
-    </ng-template> -->
+    </ng-template>
   </section>
 </main>
 

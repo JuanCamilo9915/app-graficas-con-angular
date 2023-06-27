@@ -52,13 +52,15 @@ export class GraficasNormalesComponent implements OnInit, OnDestroy {
       type: 'bar',
       data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
+        datasets: [
+          {
           label: '# of Votes',
           data: this.dataAleatoria,
           backgroundColor: ['green', 'blue', 'yellow'],
           borderColor: "green",
           borderWidth: 7
-        }]
+        }
+      ]
       },
       options: {
         scales: {

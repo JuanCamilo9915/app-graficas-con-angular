@@ -47,8 +47,29 @@ a {
     font-size: x-large;
 }
 
-.barra-navegacion {
-    width: 100vw;
-    height: 200px;
-    background-color: blueviolet;
+.lista-desordenada {
+    display: flex;
+    list-style: none;
+    padding: 0%;
+    justify-content: center;
+}
+
+.lista-desordenada > li {
+    display: inline-flex;
+    width: 50%;
+    height: 50px;
+}
+
+.lista-desordenada > li:hover {
+    background-color: aliceblue;
+}
+
+.lista-desordenada > li > button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background: none;
 }
