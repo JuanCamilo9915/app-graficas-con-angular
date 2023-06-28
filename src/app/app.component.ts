@@ -6,47 +6,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  // mostrarGrafica
+
   sonGraficasNormalesVisibles: boolean;
   btn1: boolean;
   btn2: boolean;
   elementosMenu: object[];
   menuDesconocido = 'Menú Desconcido';
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
-      this.sonGraficasNormalesVisibles = true;
-      this.btn1 = true;
-      this.btn2 = false;
-      this.elementosMenu = [
-        {url: '#graficaBarras', etiqueta: 'Barras'},
-        {url: '#graficaBarras2', etiqueta: 'Barras 2', tget: '_self'},
-        {url: '#graficaBarras2', etiqueta: 'Barras 2', tget: '_blank'},
-        {url: 'https://developer.mozilla.org/en-US/', tget: '_self'},
-        {url: 'https://developer.mozilla.org/en-US/', tget: '_blank'},
-        {url: 'https://developer.mozilla.org/en-US/'},
-        {url: 'https://developer.mozilla.org/en-US/', tget: '_self'},
-        {url: 'https://developer.mozilla.org/en-US/', tget: '_blank'},
-        {url: 'https://developer.mozilla.org/en-US/', tget: '_blank'},
-        {url: 'https://developer.mozilla.org/en-US/'},
-        {url: 'https://developer.mozilla.org/en-US/', tget: '_self'},
-        {url: 'https://developer.mozilla.org/en-US/', tget: '_blank'}
-      ];
+    this.inicializarVariablesGlobales();
   }
 
-  alerta(idEvent: number): void {
-    this.sonGraficasNormalesVisibles = idEvent === 1 ? true : false;
+  inicializarVariablesGlobales(): void {
+    this.sonGraficasNormalesVisibles = true;
+    this.btn1 = true;
+    this.btn2 = false;
+    this.elementosMenu = [
+      { url: '#graficaBarras', etiqueta: 'Barras' },
+      { url: '#graficaBarras2', etiqueta: 'Barras 2', tget: '_self' },
+      { url: '#graficaBarras2', etiqueta: 'Barras 2', tget: '_blank' },
+      { url: 'https://developer.mozilla.org/en-US/', tget: '_self' },
+      { url: 'https://developer.mozilla.org/en-US/', tget: '_blank' },
+      { url: 'https://developer.mozilla.org/en-US/' },
+      { url: 'https://developer.mozilla.org/en-US/', tget: '_self' },
+      { url: 'https://developer.mozilla.org/en-US/', tget: '_blank' },
+      { url: 'https://developer.mozilla.org/en-US/', tget: '_blank' },
+      { url: 'https://developer.mozilla.org/en-US/' },
+      { url: 'https://developer.mozilla.org/en-US/', tget: '_self' },
+      { url: 'https://developer.mozilla.org/en-US/', tget: '_blank' }
+    ];
+  }
 
-    if (idEvent === 1) {
+  cambiarTipoGrafica(idBtn: number): void {
+    if (idBtn === 1) {
       this.btn1 = true;
       this.btn2 = false;
+      this.sonGraficasNormalesVisibles = true;
       return;
     }
 
     this.btn1 = false;
     this.btn2 = true;
-
+    this.sonGraficasNormalesVisibles = false;
   }
-  
+
 }
