@@ -12,6 +12,7 @@ export class GraficasNormalesComponent implements OnInit, OnDestroy {
   c: any = [];
   c2: any = [];
   ct: any = [];
+  c3: any = [];
   dataAleatoria: number[] = [12, 19, 3, 5, 2, 3];
 
   constructor() { }
@@ -21,6 +22,7 @@ export class GraficasNormalesComponent implements OnInit, OnDestroy {
     this.cre();
     this.cret2();
     this.cre2();
+    this.cre3();
   }
 
   cre() {
@@ -68,6 +70,23 @@ export class GraficasNormalesComponent implements OnInit, OnDestroy {
             beginAtZero: true
           }
         }
+      }
+    });
+  }
+
+  cre3() {
+    
+    this.c3 = new Chart('myChart3', {
+      type: 'line',
+      data: {
+        labels: ['junio', 'agosto', 'febrero', 'marzo', 'abril', 'diciembre', 'mayo', 'vacio'],
+        datasets: [{
+          label: 'My First Dataset',
+          data: [65, 59, 80, 81, 56, 55, 40],
+          fill: false,
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
+        }]
       }
     });
   }
